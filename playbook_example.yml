@@ -1,0 +1,15 @@
+---
+
+- hosts: 192.192.192.250
+  become: true
+  tasks:
+  
+  - name: install apache 2
+    apt: 
+      name: apache2
+      state: latest
+      
+  - name: install php support
+    apt: 
+      name: libapache2-mod-php
+      state: latest
